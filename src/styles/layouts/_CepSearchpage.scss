@@ -1,0 +1,15 @@
+.cep-search {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(56);
+
+  padding: 0 toRem(28);
+
+  background-color: $color-background;
+
+  box-sizing: border-box;
+}

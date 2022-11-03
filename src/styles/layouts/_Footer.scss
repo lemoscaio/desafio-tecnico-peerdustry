@@ -1,0 +1,23 @@
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  padding: toRem(12);
+  background-color: $color-background-2;
+
+  font-family: $font-main;
+
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+
+  &__link {
+    margin: 0 toRem(4);
+
+    &:visited {
+      color: inherit;
+    }
+  }
+}

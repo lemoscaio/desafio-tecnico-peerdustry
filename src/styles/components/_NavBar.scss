@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: toRem(8) 0;
+
+  &__item {
+    padding: toRem(8) toRem(12);
+
+    border: 1px solid black;
+
+    cursor: pointer;
+
+    &--selected {
+      background-color: #bbb;
+    }
+  }
+}
