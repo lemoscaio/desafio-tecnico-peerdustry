@@ -1,16 +1,27 @@
 .word-list {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, calc(100% / 3));
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: row;
 
   width: 100%;
+
   align-items: center;
 
   padding: toRem(8) 0;
 
+  overflow-y: auto;
+
   &__word {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
+    word-wrap: break-word;
+
     padding: toRem(8) toRem(12);
 
     border: 1px solid black;
