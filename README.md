@@ -5,7 +5,7 @@
 
 Esse foi um projeto desenvolvido para um processo seletivo na Coodesh e consistiu na criação de um aplicativo para listar palavras em inglês, utilizando como base a API [Free Dictionary API](https://dictionaryapi.dev/). O projeto tem como objetivo exibir termos em inglês e gerenciar as palavras visualizadas, conforme indicado nos casos de uso que estão logo abaixo.
 
-### Requisitos obrigatórios:
+## Requisitos obrigatórios:
 
 **Obrigatório 1** - Você deverá atender aos seguintes casos de uso:
 
