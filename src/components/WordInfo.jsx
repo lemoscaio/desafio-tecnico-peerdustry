@@ -41,9 +41,11 @@ export function WordInfo({ chosenWord, setChosenWord }) {
   return (
     <section className="word-info">
       <div className="word-info__top-nav">
-        <div className="word-info__close" onClick={() => setChosenWord("")}>
-          x
-        </div>
+        {chosenWord ? (
+          <div className="word-info__close" onClick={() => setChosenWord("")}>
+            x
+          </div>
+        ) : null}
         {wordInfo.word ? (
           <div className="word-info__close" onClick={handleFavoriteClick}>
             {isFavorite ? "Remove from Favorites" : "Save to Favorites"}
@@ -55,9 +57,9 @@ export function WordInfo({ chosenWord, setChosenWord }) {
         <p>{wordInfo?.phonetic}</p>
       </div>
       <div className="word-info__audio-wrapper">
-        {wordInfo.phonetics?.map((phonetic) => {
+        {wordInfo.phonetics?.map((phonetic, index) => {
           return phonetic.audio ? (
-            <audio controls>
+            <audio controls key={index}>
               <source src={phonetic.audio} type="audio/ogg" />
               Your browser does not support the audio element.
             </audio>
