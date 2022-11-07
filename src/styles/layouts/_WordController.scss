@@ -1,0 +1,54 @@
+.word-controller {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+
+  padding: 0 toRem(16);
+
+  &__title {
+    color: $color-primary-4;
+    font-size: toRem(22);
+    margin: toRem(8) 0;
+
+    font-weight: 700;
+
+    @include for-desktop-only {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    padding: toRem(8);
+
+    margin-top: toRem(16);
+  }
+
+  &__footer-button {
+    background-color: $color-primary-2;
+    padding: toRem(4) toRem(12);
+
+    border-radius: 5px;
+    border: $border-default;
+
+    font-family: $font-main;
+    color: $color-primary-4;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      background-color: darken($color-primary-2, 5);
+    }
+
+    &:active {
+      background-color: darken($color-primary-2, 10);
+    }
+  }
+}

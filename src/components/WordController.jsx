@@ -1,7 +1,7 @@
-import { useState } from "react"
-import { useFavoriteWords } from "../hooks/useFavoriteWords"
+import { useContext, useState } from "react"
+import { favoriteWordsContext } from "../contexts/favoriteWordsContext"
+import { historyWordsContext } from "../contexts/historyWordsContext"
 import { useFetchWords } from "../hooks/useFetchWords"
-import { useHistory } from "../hooks/useHistory"
 import { NavBar } from "./Navbar"
 import { WordList } from "./WordList"
 
@@ -9,11 +9,11 @@ export function WordController({ chosenWord, setChosenWord }) {
   const [chosenNavItem, setChosenNavItem] = useState("Word List")
 
   const [wordPage, setWordPage] = useState(1)
-  const WORD_QUANTITY = 50
+  const WORD_QUANTITY = 48
 
   const { words } = useFetchWords(WORD_QUANTITY, wordPage)
-  const { historyWords, clearHistory } = useHistory()
-  const { favoriteWords } = useFavoriteWords()
+  const { historyWords, clearHistory } = useContext(historyWordsContext)
+  const { favoriteWords } = useContext(favoriteWordsContext)
 
   const wordList = {
     "Word List": words,
@@ -31,7 +31,7 @@ export function WordController({ chosenWord, setChosenWord }) {
         chosenNavItem={chosenNavItem}
         setChosenNavItem={setChosenNavItem}
       />
-      <p>Word List</p>
+      <p className="word-controller__title">Word List</p>
       <WordList
         words={wordList[chosenNavItem]}
         chosenWord={chosenWord}

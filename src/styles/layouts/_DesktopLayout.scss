@@ -1,0 +1,11 @@
+.desktop-wrapper {
+  @include for-desktop-only {
+    display: flex;
+    justify-content: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    gap: toRem(8);
+  }
+}

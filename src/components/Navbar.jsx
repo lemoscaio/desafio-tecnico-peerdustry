@@ -7,17 +7,19 @@ export function NavBar({ chosenNavItem, setChosenNavItem }) {
 
   return (
     <nav className="navbar">
-      {navItems.map((item) => (
-        <p
-          key={item}
-          className={`navbar__item ${
-            item === chosenNavItem && "navbar__item--selected"
-          }`}
-          onClick={() => handleClick(item)}
-        >
-          {item}
-        </p>
-      ))}
+      <div className="navbar__wrapper">
+        {navItems.map((item) => (
+          <p
+            key={item}
+            className={`navbar__item ${
+              item === chosenNavItem && "navbar__item--selected"
+            }`}
+            onClick={() => handleClick(item)}
+          >
+            {item}
+          </p>
+        ))}
+      </div>
     </nav>
   )
 }

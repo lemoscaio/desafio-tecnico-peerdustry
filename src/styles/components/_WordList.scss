@@ -1,16 +1,36 @@
 .word-list {
-  display: grid;
-  grid-template-columns: repeat(3, calc(100% / 3));
-  grid-template-rows: repeat(3, auto);
-  grid-auto-flow: row;
-
   width: 100%;
+  min-height: 100px;
 
   align-items: center;
 
-  padding: toRem(8) 0;
+  margin-top: toRem(8);
+  padding-right: toRem(8);
 
   overflow-y: auto;
+
+  user-select: none;
+
+  @include for-desktop-only {
+    margin: 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: repeat(3, auto);
+
+    &:empty {
+      display: none;
+    }
+
+    background-color: $color-primary-2;
+
+    border: $border-default;
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
   &__word {
     height: 100%;
@@ -19,17 +39,45 @@
     align-items: center;
     justify-content: center;
 
+    color: $color-primary-4;
+    font-weight: 500;
     text-align: center;
     word-wrap: break-word;
 
     padding: toRem(8) toRem(12);
 
-    border: 1px solid black;
-
     cursor: pointer;
 
+    transition: all 0.07s ease-in-out;
+
+    &:hover,
     &--selected {
-      background-color: #bbb;
+      color: white;
+      background-color: $color-primary-0;
     }
+
+    &:not(:nth-child(3n)) {
+      border-right: $border-default;
+    }
+
+    &:nth-child(n + 4) {
+      border-top: $border-default;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: toRem(48) 0;
+
+    background-color: $color-primary-2;
+    border: $border-default;
+    border-radius: 5px;
+
+    color: $color-primary-4;
+    font-weight: 500;
+    text-align: center;
   }
 }

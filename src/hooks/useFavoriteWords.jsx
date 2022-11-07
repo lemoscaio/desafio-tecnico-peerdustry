@@ -8,15 +8,19 @@ export function useFavoriteWords() {
 
   function addFavoriteWord(word) {
     const newFavoriteWords = [...favoriteWords, word]
-    setFavoriteWords(newFavoriteWords)
+    setFavoriteWords([...newFavoriteWords])
   }
 
   function removeFavoriteWord(word) {
     const newFavoriteWords = favoriteWords.filter(
       (favoriteWord) => favoriteWord !== word,
     )
-    setFavoriteWords(newFavoriteWords)
+    setFavoriteWords([...newFavoriteWords])
   }
 
-  return { favoriteWords, addFavoriteWord, removeFavoriteWord }
+  return {
+    favoriteWords,
+    addFavoriteWord,
+    removeFavoriteWord,
+  }
 }

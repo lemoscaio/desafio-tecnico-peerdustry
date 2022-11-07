@@ -1,0 +1,23 @@
+.button {
+  background-color: $color-primary-2;
+  padding: toRem(4) toRem(12);
+
+  border-radius: 5px;
+  border: $border-default;
+
+  font-family: $font-main;
+  color: $color-primary-4;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: darken($color-primary-2, 5);
+  }
+
+  &:active {
+    background-color: darken($color-primary-2, 10);
+  }
+}

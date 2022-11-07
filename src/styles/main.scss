@@ -1,13 +1,14 @@
 @import "./abstracts/typography";
 @import "./abstracts/variables";
 @import "./abstracts/functions";
+@import "./abstracts/mixins";
 @import "./base/reset";
 @import "./base/base";
 
-@import "./layouts/CepSearchpage";
-@import "./layouts/Footer";
+@import "./layouts/WordController";
+@import "./layouts/DesktopLayout.scss";
 
+@import "./components/Button";
 @import "./components/NavBar";
 @import "./components/WordList";
-@import "./components/WordController";
 @import "./components/WordInfo";

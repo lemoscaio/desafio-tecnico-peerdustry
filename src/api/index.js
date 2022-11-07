@@ -1,7 +1,10 @@
 import axios from "axios"
 
-export const api = axios.create({ baseURL: "http://localhost:3000" })
+const DATABASE_URL = import.meta.env.VITE_APP_DATABASE_URL
+const DICTIONARY_API_URL = import.meta.env.VITE_APP_DICTIONARY_API_URL
+
+export const api = axios.create({ baseURL: DATABASE_URL })
 
 export const dictionaryApi = axios.create({
-  baseURL: "https://api.dictionaryapi.dev/api/v2/entries/en",
+  baseURL: DICTIONARY_API_URL,
 })

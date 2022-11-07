@@ -7,43 +7,68 @@
 
   padding: toRem(16) toRem(16) toRem(42);
 
+  @include for-desktop-only {
+    min-width: 480px;
+    max-width: 30%;
+  }
+
   &__top-nav {
     display: flex;
     justify-content: space-between;
+    padding: 0 toRem(8);
   }
 
   &__close {
     font-size: toRem(18);
+
+    color: $color-primary-4;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.12s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   &__word-display {
-    background-color: red;
+    background-color: $color-primary-2;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-shrink: 0;
+    gap: toRem(12);
 
     height: 180px;
     margin: toRem(16) 0 0;
-    padding: toRem(8);
+    padding: toRem(8) toRem(24);
 
+    color: $color-primary-4;
+    font-weight: 700;
     font-size: toRem(24);
+    text-align: center;
 
-    border: 1px solid black;
+    border: $border-default;
+    border-radius: 15px;
   }
 
   &__audio-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: toRem(8);
 
     width: 100%;
     margin: toRem(16) 0;
   }
 
   &__section-title {
+    color: $color-primary-4;
     font-size: toRem(24);
     font-weight: 700;
   }
@@ -72,7 +97,7 @@
   }
 
   &__nav {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -86,20 +111,20 @@
     gap: toRem(16);
 
     height: toRem(36);
+
+    @include for-desktop-only {
+      position: relative;
+    }
   }
 
   &__nav-item {
     width: 100%;
 
-    padding: toRem(4) 0;
-
-    border-radius: 0;
-    border: 1px solid black;
-
     user-select: none;
     cursor: pointer;
 
     &--disabled {
+      color: darken($color-secondary-0, 20);
       background-color: darkgrey;
       border: none;
 

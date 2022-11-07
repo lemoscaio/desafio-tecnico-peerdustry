@@ -1,19 +1,14 @@
-$color-background: #dbf0ef;
-$color-background-2: #accfca;
+$color-font-main: #1e1f23;
 
-$color-main-1: #ebf7f3;
-$color-main-2: #00bd89;
-$color-main-2-opacity: rgb(15, 140, 104);
+$color-primary-0: #80aa98; // Main Primary color */
+$color-primary-1: #ffffff;
+$color-primary-2: #cad9d2;
+$color-primary-3: #418568;
+$color-primary-4: #095f3a;
 
-$color-secondary-1: #f0f4f6;
-$color-secondary-2: #bbc2c2;
-
-$color-font-main: #2d4047;
-$color-font-secondary: $color-secondary-2;
-$color-font-alt-1: #7c8989;
-
-$color-font-wrong: #f01818;
-
-$white: #ffffff;
+$color-secondary-0: #bebdbe; // Main secondary color */
+$color-secondary-1: #eeeeee;
 
 $font-main: "Noto Sans", sans-serif;
+
+$border-default: 1px solid $color-primary-0;
