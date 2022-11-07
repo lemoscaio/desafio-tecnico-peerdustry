@@ -36,7 +36,7 @@ Install the dependencies.
 $ cd desafio-tecnico-peerdustry && npm install
 ```
 
-## 🚀 Como usar
+## Como usar
 
 Primeiramente, crie o arquivo `.env` baseado no `.env.example`. Esse arquivo contém o endereço da Free Dictionary API e o endereço correspondente para o servidor do JSON-Server.
 
@@ -52,3 +52,7 @@ Após isso, suba a aplicação front-end:
 $ npm run dev
 ```
 
+
+## Apresentação do projeto
+
+https://www.loom.com/embed/1b62274944384dd9a875dfa0dacda45c
